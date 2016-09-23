@@ -1,0 +1,85 @@
+
+>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Peluquería Unisex Katherinne</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+
+             <p><a class="btn btn-primary" href="users/sign_up" role="button">Registrarse</a></p>
+            </div>
+            <div class="form-group">
+
+              <p><a  class="btn btn-primary" href="users/sign_in" role="button">Iniciar Sesion</a>
+              </p>
+              
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1><em>Bienvenido </em></h1>
+        <p>Peluquería Unisex Katherinne, le ofrece una variedad de servicios disponibles para usted, para relucir su belleza con nuestros productos. Consulte nuestro catálogo de productos cosméticos o solicite algún servicio solo con un clic.  </p>
+        <img src='<%= asset_path 'pk.jpg' %>' class="img-rounded"  alt="peluqueria"  width="900" height="300"/>
+
+        
+        
+        
+        
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>¿Aún no eres cliente?</h2>
+          <p>Registrate para acceder a todos los beneficios que tenemos para tí, agenda una visita del servicio que desees, recibe información y descuentos a tu correo y mucho más.Para registrarse has clic e ingresa tus datos. </p>
+          <p><a class="btn btn-success" href="users/sign_up" role="button">Registrate »</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Productos</h2>
+          <p>Peluquería Unisex Katherinne ofrece múltiples productos para la venta, como shampoo, bálsamos capilares, delineadores, tijeras para todo tipo de corte entre otros. Visita nuestro catálogo completo de produtos aquí </p>
+          
+          <p><a class="btn btn-success" href="products" role="button">Productos »</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Servicios</h2>
+          <p>¿Quieres una manicure?, ¿Un peinado para bodas?. Revisa la lista completa de todos nuestros servicios que tenemos para tí. </p>
+          <p><a class="btn btn-success" href="services" role="button">Servicios »</a></p>
+
+
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>© 2016 Plastic Producciones.</p>
+      </footer>
+    </div> <!-- /container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </body>
