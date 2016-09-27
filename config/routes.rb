@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/panel', as: 'rails_admin'
   resources :services
   resources :products
   resources :categories
