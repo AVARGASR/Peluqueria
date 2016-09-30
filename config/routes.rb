@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/panel', as: 'rails_admin'
+
+  devise_for :users
+
   resources :services
   resources :products
   resources :categories
@@ -7,7 +10,7 @@ Rails.application.routes.draw do
   resources :reservations
   get 'welcome/index'
 
-  devise_for :users
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

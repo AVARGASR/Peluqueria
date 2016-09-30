@@ -10,7 +10,31 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+ 
 
+    <div><%= f.check_box :sexo, {}, true %> <%= f.label :sexo, "Maraca" %> </div>
+    <div><%= f.check_box :sexo, {}, false %> <%= f.label :sexo, "Puto" %> </div>
+
+     <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+ 
+
+ 
   <div class="field">
     <%= f.label :fecha %><br>
     <%= f.date_select :fecha %>

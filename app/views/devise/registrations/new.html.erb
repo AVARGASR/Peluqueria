@@ -3,6 +3,13 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+  <% for role in User::ROLES %>
+    <%= radio_button_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[role][]"}%>
+    <%= label_tag "user_roles_#{role}", role.to_s.humanize %><br />
+  <% end %>
+  <%= hidden_field_tag "user[roles][]", "" %>
+  <br>
+
 
 
   <div class="field">
@@ -24,11 +31,6 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
-
-  <div class="form-group">
-                <%= f.label :permission_level, value: "Grado" %>
-                <%= f.number_field :permission_level, class:"form-control"%>
-            </div>
 
 
 
