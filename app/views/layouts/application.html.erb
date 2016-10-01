@@ -27,7 +27,7 @@
             <div class="btn btn-primary" > <%= link_to 'Panel', "/panel" %> </div>
               <div class="btn btn-primary" > <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete %> </div>
             <% else %>
-              <div class="btn btn-primary" > <%= link_to 'Registrarse', new_user_registration_path %> </div>
+              
               <div class="btn btn-primary" > <%= link_to 'Iniciar Sesion', new_user_session_path %> </div>
               <% end %>
 

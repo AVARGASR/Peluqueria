@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class="field">
+      <%= image_tag @service.cover.url(:mini)%> 
+</div>
+
 <p>
   <strong>Tipo:</strong>
   <%= @service.tipo %>

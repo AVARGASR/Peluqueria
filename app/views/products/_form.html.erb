@@ -30,8 +30,13 @@
   <div class="field">
     <%= f.label :category_id, "Categoria" %><br>
     <%= collection_select( :product, :category_id, Category.all, :id, :descripcion, { :multiple => false }, { :class => "my-custom-class"}) %>
+
+    <div class="field">
+   Imagen: <%= f.file_field :cover %>
+   </div>
+   
   </div>
   <div class="actions">
-    <%= f.submit "Ingresar" %>
+    <%= f.submit "Crear Producto" %>
   </div>
 <% end %>

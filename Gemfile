@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'rails_admin', '~> 0.8.1'
 #GEM ROLIFY
 gem 'rolify'
+#PAPERCLIP PARA SUBIR IMAGENES
+gem 'paperclip', '~> 4.3', '>= 4.3.6' 
 
 # Gestión de cuentas de usuario
 gem 'devise'
