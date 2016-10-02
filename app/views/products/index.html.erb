@@ -2,14 +2,16 @@
 
 <h1>Listing Products</h1>
 
-<table>
-  <thead>
+<div style="width:50%;margin:0 auto;">
+  <h1>Nuestros Productos</h1>
+
+<div class="table">
+    <table class="table table-hover text-center">
+    <thead>
     <tr>
-      <th>Name</th>
-      <th>Precio</th>
-      <th>Stock</th>
+      <th>Nombre</th>
       <th>Descripcion</th>
-      <th>Category</th>
+      <th>Categoria<th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,11 +20,10 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.precio %></td>
-        <td><%= product.stock %></td>
         <td><%= product.descripcion %></td>
-        <td><%= product.category %></td>
-        <td><%= link_to 'Ver', product %></td>
+         <td><%= product.category ? product.category.nombre: 'No asignado' %></td>
+        <td><%= image_tag product.cover.url(:thumb)%></td>
+        <td><%= link_to 'Saber más', product, class:"btn btn-default" %></td>
         <% if current_user %>
         <td><%= link_to 'Editar', edit_product_path(product) %></td>
         <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿Está seguro/a?' } %></td>
