@@ -13,6 +13,8 @@
     </tr>
   </thead>
 
+
+
   <tbody>
     <% @reservations.each do |reservation| %>
       <tr>
@@ -20,9 +22,11 @@
         <td><%= reservation.apellido %></td>
         <td><%= reservation.fecha %></td>
         <td><%= reservation.descripcion %></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver Reserva', reservation %></td>
+        <% if current_user %>
+        <td><%= link_to 'Editar', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Eliminar', reservation, method: :delete, data: { confirm: '¿Estás seguro/a?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Reservation', new_reservation_path %>
+<%= link_to 'Reserva tu hora', new_reservation_path %>

@@ -2,6 +2,19 @@
 
 <h1>Listing Services</h1>
 
+
+
+
+<div class="inner cover">
+            <h1 class="cover-heading">Cover your page.</h1>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+</div>
+
+
+
 <table>
   <thead>
     <tr>
@@ -21,13 +34,16 @@
         <td><%= service.descripcion %></td>
         <td><%= service.reservation %></td>
         <td><%= link_to 'Show', service %></td>
+        <% if current_user %>
         <td><%= link_to 'Edit', edit_service_path(service) %></td>
         <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if current_user %>
 <%= link_to 'New Service', new_service_path %>
+<%end%>
