@@ -21,12 +21,12 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.descripcion %></td>
-         <td><%= product.category ? product.category.nombre: 'No asignado' %></td>
+         <td><%= product.category.descripcion %></td>
         <td><%= image_tag product.cover.url(:thumb)%></td>
-        <td><%= link_to 'Saber más', product, class:"btn btn-default" %></td>
+        <td><%= link_to 'Saber más', product, class:"btn btn-success" %></td>
         <% if current_user %>
-        <td><%= link_to 'Editar', edit_product_path(product) %></td>
-        <td><%= link_to 'Eliminar', product, method: :delete, data: { confirm: '¿Está seguro/a?' } %></td>
+        <td><%= link_to 'Editar', edit_product_path(product), class:"btn btn-success" %></td>
+        <td><%= link_to 'Eliminar', product, class:"btn btn-success", method: :delete, data: { confirm: '¿Está seguro/a?' } %></td>
         <%end%>
       </tr>
     <% end %>
@@ -36,5 +36,5 @@
 <br>
 
 <% if current_user %>
-<%= link_to 'Nuevo producto', new_product_path %>
+<%= link_to 'Nuevo producto', new_product_path, class:"btn btn-success" %>
 <%end%>

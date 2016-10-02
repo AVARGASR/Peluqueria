@@ -24,10 +24,10 @@
         <td><%= service.tipo %></td>
         <td><%= service.descripcion %></td>
         <td><%= image_tag service.cover.url(:thumb)%></td>
-        <td><%= link_to 'Ver servicio', service, class:"btn btn-default" %></td>
+        <td><%= link_to 'Ver servicio', service, class:"btn btn-success" %></td>
         <% if current_user %>
-        <td><%= link_to 'Editar ', edit_service_path(service) %></td>
-        <td><%= link_to 'Eliminar', service, method: :delete, data: { confirm: '¿Está seguro/a?' } %></td>
+        <td><%= link_to 'Editar ', edit_service_path(service), class:"btn btn-success" %></td>
+        <td><%= link_to 'Eliminar', service, class:"btn btn-success",   method: :delete, data: { confirm: '¿Está seguro/a?' } %></td>
         <%end%>
       </tr>
     <% end %>
@@ -36,6 +36,6 @@
 
 <br>
 <% if current_user %>
-<%= link_to 'Nuevo servicio', new_service_path %>
+<%= link_to 'Nuevo servicio', new_service_path, class:"btn btn-success" %>
 <%end%>
 </div>

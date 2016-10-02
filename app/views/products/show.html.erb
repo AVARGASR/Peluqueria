@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="field">
-      <%= image_tag @product.cover.url(:mini)%> 
+      <%= image_tag @product.cover.url(:medium)%> 
 </div>
 
 <p>
@@ -26,7 +26,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category %>
+  <%= @product.category.descripcion %>
 </p>
 <%= link_to 'Modificar', edit_product_path(@product) %> |
 <%= link_to 'Volver', products_path %>

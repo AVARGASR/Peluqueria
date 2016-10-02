@@ -7,6 +7,6 @@ class Product < ActiveRecord::Base
   validates_numericality_of :stock, :greater_than => 0, :message => "No puede ser negativo o cero"
   validates :precio, :numericality => { :greater_than_or_equal_to => 0, message: 'Formato de precio incorrecto, favor reintentar.' }
   #Creando y dando formato con paperclip
- has_attached_file :cover, styles: {medium:"1280x720", thumb:"300x300", mini:"400x200"}
+ has_attached_file :cover, styles: {medium:"600x600", thumb:"300x300", mini:"200x200"}
  validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/
 end
