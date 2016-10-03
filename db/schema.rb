@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161001202451) do
+ActiveRecord::Schema.define(version: 20161002235334) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "descripcion", limit: 255
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20161001202451) do
     t.string   "email",       limit: 255
     t.string   "direccion",   limit: 255
     t.boolean  "sexo"
+    t.time     "hora"
   end
 
   create_table "services", force: :cascade do |t|
@@ -82,6 +83,7 @@ ActiveRecord::Schema.define(version: 20161001202451) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
+    t.string   "username",               limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
     t.integer  "permission_level",       limit: 4
@@ -91,6 +93,4 @@ ActiveRecord::Schema.define(version: 20161001202451) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  add_foreign_key "products", "categories"
-  add_foreign_key "services", "reservations"
 end
