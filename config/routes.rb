@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :months
   mount RailsAdmin::Engine => '/panel', as: 'rails_admin'
 
   devise_for :users
-
+  
   resources :services
   resources :products
   resources :categories

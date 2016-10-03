@@ -13,9 +13,9 @@
     <%= f.text_field :apellido, class: "form-control", style: "width:200px" %>
   </div>
  
+<div><%= f.radio_button :sexo, false %> <%= f.label :sexo, "Masculino" %></div>
+<div><%= f.radio_button :sexo, true %> <%= f.label :sexo, "Femenino" %></div>
 
-    <div><%= f.check_box :sexo, {}, true %> <%= f.label :sexo, "Femenino" %> </div>
-    <div><%= f.check_box :sexo, {}, false %> <%= f.label :sexo, "Masculino" %> </div>
 
      <div class="field">
     <%= f.label :email %><br>
@@ -32,6 +32,9 @@
     <%= f.text_field :direccion, class: "form-control", style: "width:200px" %>
   </div>
 
+   <div class="field">
+    <%= f.label :service_tipo, "Servicio" %><br>
+    <%= collection_select( :service, :service_tipo, Service.all, :tipo, :tipo, { :multiple => false }, { :class => "my-custom-class"}) %>
  
   <div class="field">
     <%= f.label :fecha %><br>

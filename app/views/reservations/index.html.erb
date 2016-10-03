@@ -63,8 +63,7 @@
     <tr>
       <th>Nombre</th>
       <th>Apellido</th>
-      <th>Fecha de reserva</th>
-      <th>Descripcion</th>
+      <th>Hora Reserva</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -76,9 +75,8 @@
       <tr>
         <td><%= reservation.nombre %></td>
         <td><%= reservation.apellido %></td>
-        <td><%= reservation.fecha %></td>
-        <td><%= reservation.descripcion %></td>
-        <td><%= link_to 'Ver Reserva', reservation %></td>
+        <td><%= reservation.hora %></td>
+        
         <td><%= link_to 'Editar', edit_reservation_path(reservation) %></td>
         <td><%= link_to 'Eliminar', reservation, method: :delete, data: { confirm: '¿Estás seguro/a?' } %></td>
       </tr>

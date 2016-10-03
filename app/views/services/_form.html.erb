@@ -24,16 +24,13 @@
     <%= f.label :descripcion %><br>
     <%= f.text_field :descripcion %>
   </div>
-  <div class="field">
-    <%= f.label :reservation_id %><br>
-    <%= f.text_field :reservation_id %>
-  </div>
+ 
 
    <div class="field">
    Imagen: <%= f.file_field :cover %>
    </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Crear Servicio" %>
   </div>
 <% end %>

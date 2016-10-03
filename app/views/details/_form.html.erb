@@ -1,4 +1,5 @@
 <%= form_for(@detail) do |f| %>
+<body class="fondo">
   <% if @detail.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
@@ -12,18 +13,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :monto %><br>
+    <%= f.label :GastoMensual %><br>
     <%= f.number_field :monto %>
   </div>
-  <div class="field">
-    <%= f.label :fecha %><br>
-    <%= f.date_select :fecha %>
+   <div class="field">
+    <%= f.label :IngresoMensual %><br>
+    <%= f.number_field :ingreso %>
   </div>
+
+ <div class="field">
+    <%= f.label :month_id, "Mes" %><br>
+    <%= collection_select( :month, :month_id, Month.all, :id, :mes, { :multiple => false }, { :class => "my-custom-class"}) %>
+
   <div class="field">
     <%= f.label :descripcion %><br>
     <%= f.text_field :descripcion %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Ingresar Detalle" %>
   </div>
 <% end %>

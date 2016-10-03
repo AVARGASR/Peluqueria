@@ -1,13 +1,22 @@
 <p id="notice"><%= notice %></p>
+<body class="fondo">
 
 <p>
-  <strong>Monto:</strong>
+  <strong>GastoMensual:</strong>
   <%= @detail.monto %>
 </p>
 
 <p>
-  <strong>Fecha:</strong>
-  <%= @detail.fecha %>
+  <strong>IngresoMensual:</strong>
+  <%= @detail.ingreso %>
+</p>
+<p>
+  <strong>Total:</strong>
+  <%= @detail.monto - @detail.ingreso%>
+</p> 
+<p>
+  <strong>Mes:</strong>
+  <%= @detail.month %>
 </p>
 
 <p>
@@ -15,5 +24,5 @@
   <%= @detail.descripcion %>
 </p>
 
-<%= link_to 'Edit', edit_detail_path(@detail) %> |
-<%= link_to 'Back', details_path %>
+<%= link_to 'Editar', edit_detail_path(@detail) %> |
+<%= link_to 'Volver', details_path %>

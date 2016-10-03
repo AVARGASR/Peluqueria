@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+l<!DOCTYPE html>
 <html>
 <head>
   <title>Peluqueria</title>
@@ -24,6 +24,7 @@
             <div class="form-group">
 
             <% if current_user %>
+            <div class="btn btn-primary" > <%= link_to 'Registro Mensual', new_detail_path %> </div>
             <div class="btn btn-primary" > <%= link_to 'Panel', "/panel" %> </div>
               <div class="btn btn-primary" > <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete %> </div>
             <% else %>
