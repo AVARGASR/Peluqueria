@@ -1,16 +1,9 @@
 <body class="fondo">
 <%= form_for(@reservation) do |f| %>
   <% if @reservation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
-
-      <ul>
-      <% @reservation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <h3>Completa correctamente los siguientes campos:</h3>
   <% end %>
+
   <div class="field">
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre, class: "form-control", style: "width:200px" %>
@@ -34,11 +27,15 @@
     <%= f.text_field :telefono, class: "form-control", style: "width:200px" %>
   </div>
  
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion, class: "form-control", style: "width:200px" %>
+  </div>
 
  
   <div class="field">
     <%= f.label :fecha %><br>
-    <%= f.date_select :fecha %>
+    <%= f.date_field :fecha, start_year: 2016, end_year: 2017, class: "form-control", style: "width:200px" %>
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>

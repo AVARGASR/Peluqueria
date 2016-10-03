@@ -23,6 +23,8 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'devise'
 #cancancancancancan
 gem 'cancancan', '~> 1.10'
+# Validar un Rut
+gem 'rut_validation'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
