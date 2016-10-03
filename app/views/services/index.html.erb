@@ -1,14 +1,19 @@
 
+<body class="fondo">
 <p id="notice"><%= notice %></p>
+
 
 <div style="width:50%;margin:0 auto;">
 
 <h2>Nuestros Servicios</h2>
 
 <div class="table">
-    <table class="table table-hover text-center">
+
+    <table class="table table-hover text-center" >
+     
     <thead>
       <tr>
+
       <th> <h2>Tipo</h2></th>
       <th><h2>Descripcion</h2></th>
       <th colspan="3"></th>
@@ -21,8 +26,9 @@
   <tbody>
     <% @services.each do |service| %>
       <tr>
+
         <td><%= service.tipo %></td>
-        <td><%= service.descripcion %></td>
+        <td><%= service.descripcion %></td> 
         <td><%= image_tag service.cover.url(:thumb)%></td>
         <td><%= link_to 'Ver servicio', service, class:"btn btn-success" %></td>
         <% if current_user %>
