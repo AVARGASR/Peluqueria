@@ -35,7 +35,10 @@
  
   <div class="field">
     <%= f.label :fecha %><br>
-    <%= f.date_field :fecha, start_year: 2016, end_year: 2017, class: "form-control", style: "width:200px" %>
+    <input  id="fecha" type='date' min='2016-10-03' max='2016-10-31' class="form-control" name="fecha[fecha]",style:"width: 200px">
+      
+    </input>
+  
   </div>
   <div class="field">
     <%= f.label :descripcion %><br>
